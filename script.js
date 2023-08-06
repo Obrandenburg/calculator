@@ -2,11 +2,14 @@ let maths = document.querySelector('.functions');
 let display = document.querySelector('.display');
 let numbers = document.querySelector('.numbers');
 let calculator = document.querySelector('.calculator');
+let equalBttn = document.querySelector('.equals');
+let clear = document.querySelector(`.clear`);
 let userNumbers = [];
 let workingNumbers = [];
+let result;
+let currentOperator;
 
 
-let Expression = new Object();
 
 calculator.addEventListener('click', (e) => {
     let numb = e.target.value;
@@ -22,29 +25,54 @@ calculator.addEventListener('click', (e) => {
     else {
         display.textContent = `${userInt}`;
         workingNumbers.push(userInt);
-        userNumbers = []
-        //console.log('working', workingNumbers);
+        userNumbers = [];
+        if ((workingNumbers.length) >= 2){
+            operate(workingNumbers[0], workingNumbers[1]);
+            workingNumbers.splice(0, 2, result);
+            //console.log('working', workingNumbers);
+            currentOperator = numb;
+        }
+        else{currentOperator = numb};
     };
 });
 
+equalBttn.addEventListener('click', () => {
+    console.log(result);
+    workingNumbers.push(userInt);
+    userNumbers = [];
+    operate(workingNumbers[0], workingNumbers[1]);
+    workingNumbers.splice(0, 2, result);
+    //console.log('working', workingNumbers);
+    display.textContent = `${result}`;
+});
 
-//for length of array iterate through, run operate function, then remove the first two values
+clear.addEventListener('click', () =>{
+    display.textContent = `0`;
+    userNumbers = [];
+    workingNumbers = [];
+    userInt = [];
+    currentOperator = 0;
+});
+
 
 
 
 operate = function(a, b){
-    if (numb = '501'){
-        let result = a + b;
+    if (currentOperator == 501){
+        result = a + b;
+        return (result);
     }
-    else if (numb = '502'){
-        let result = a - b;
+    else if (currentOperator == 502){
+        result = a - b;
+        return (result);
     }
-    else if (numb = '503'){
-        let result = a * b;
+    else if (currentOperator == 503){
+        result = a * b;
+        return (result);
     }
-    else if (numb = '504'){
-        let result = a / b;
+    else if (currentOperator == 504){
+        result = a / b;
+        return (result);
     }
     else{console.log('error')};
 };
-//try to use numb in function and remove the event as an argument
