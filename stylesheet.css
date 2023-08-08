@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin-left:45em;
+    width: 20vw;
+    background-color: #C5D4EB;
+    padding: 0.25em;
+    border-radius: 5px;
+    height: 20vw;
+  }
+
+  button{
+    margin: 2px;
+    
+  }
+
+  .topText{
+    background-color: black;
+    border-radius: 5px;
+    padding-bottom: 2px;
+    padding-top: 0.5px;
+  }
+  #model{
+    color: white;
+    margin-left: 8rem;
+  }
+
+  .display{
+    border: thin solid black;
+    background-color: #DEDEDE;
+    border-radius: 5px;
+    width: 15vw;
+    margin-left: 3rem;
+    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+
+
+  #maker{
+    color: gray;
+    font: verdana;
+    margin-left: 4.5rem;
+  }
+  
+  .numbers{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin-left: 4rem;
+    width: 9vw;
+  }
+
+  .numbers button{
+    background-color: darkslategrey;
+    color: white;
+  }
+
+
+  #decimal.numbers{
+    grid-column: 2/4;
+    width: 6vw;
+  }
+
+  .maths{
+    display: flex;
+    flex-direction: column;
+    width: 3vw;
+  }
+
+  .maths button{
+    background-color: gray;
+    color:white;
+  }
+
+  .calculator{
+    display: flex;
+    border: thin solid lightgray;
+  }
+
+  .special{
+    display: grid;
+    grid-template-columns: 6vw 6vw;
+    width: 12vw;
+    margin-left: 4rem;
+  }
+
+  #equ{
+    display: block;
+    width: 5.75vw;
+    background-color: darkgoldenrod;
+  }
+
+  #cle{
+    display: block;
+    width: 5.75vw;
+    background-color: darkgoldenrod;
+  }
+
+
+ 
+  
+
+
+
+
+
+
+  

@@ -9,20 +9,27 @@
 </head>
 <body>
     <div class="container">
-        <div class = 'display'>0</div>
+        <div class="topText">
+            <p id="model">LI-25xa</p>
+            <div class = 'display'>0</div>  
+        </div>
+        <p id="maker">Libby Instruments</p>
         <div class = 'calculator'>
             <div class = 'numbers'>
-                <button value = '9'>9</button>
-                <button value = '8'>8</button>
-                <button value = '7'>7</button>
-                <button value = '6'>6</button>
-                <button value = '5'>5</button>
-                <button value = '4'>4</button>
-                <button value = '3'>3</button>
-                <button value = '2'>2</button>
-                <button value = '1'>1</button>
-                <button value = '0'>0</button>
+                <button value = '9' id="ni">9</button>
+                <button value = '8' id="ei">8</button>
+                <button value = '7' id="se">7</button>
+                <button value = '6' id="si">6</button>
+                <button value = '5' id="fi">5</button>
+                <button value = '4' id="fo">4</button>
+                <button value = '3' id="th">3</button>
+                <button value = '2' id="tw">2</button>
+                <button value = '1' id="on">1</button>
+                <button value = '0' id="ze">0</button>
+                <button value='.'  id="decimal">.</button>
             </div>
+
+ 
 
             <div class = 'maths'>
                 <button class = 'operators' id = 'add' value = '501'> + </button>
@@ -30,18 +37,21 @@
                 <button class = 'operators' id = 'multi' value = '503'> x </button>
                 <button class = 'operators' id = 'div' value = '504'> &#xF7 </button>
             </div>
+
         </div>
 
-    
+        <div class="special">
+            <div class = 'equals'>
+                <button id="equ">=</button>
+            </div>
+
+            <div class = 'clear'>
+                <button id="cle">AC</button>
+            </div>
         </div>
 
-        <div class = 'equals'>
-            <button>=</button>
-        </div>
 
-        <div class = 'clear'>
-            <button>AC</button>
-        </div>
+
     </div>
     
 </body>
